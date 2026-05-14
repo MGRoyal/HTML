@@ -1129,14 +1129,25 @@ logo
 <span class="brace">{</span><br>
 &nbsp;&nbsp;<span class="key">"@context"</span>: <span class="str">"https://schema.org"</span>,<br>
 &nbsp;&nbsp;<span class="key">"@graph"</span>: [<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="key">"@type"</span>: <span class="str">"Brand"</span> }, BreadcrumbList, ItemList, FAQPage, WebPage, Organization,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// VideoObject (if videos available)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="key">"@type"</span>: <span class="str">"CollectionPage"</span>, mainEntity: ItemList, about: Brand },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="key">"@type"</span>: <span class="str">"Brand"</span>, name, logo, url, description },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="key">"@type"</span>: <span class="str">"BreadcrumbList"</span>, itemListElement },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="key">"@type"</span>: <span class="str">"ItemList"</span>, numberOfItems: 40, itemListElement: [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// SINGLE offer:</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product { name, brand, image[], offers: <span class="str">Offer</span> { price, itemCondition, seller } },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// MULTI offer:</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product { name, brand, image[], offers: <span class="str">AggregateOffer</span> { lowPrice, highPrice, offerCount, offers[Offer { itemCondition, seller }] } }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;]},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="key">"@type"</span>: <span class="str">"FAQPage"</span>, mainEntity: [Question/Answer pairs] },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="key">"@type"</span>: <span class="str">"Organization"</span>, Questpair },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// VideoObject (alleen als block 8 rendert)</span><br>
 &nbsp;&nbsp;]<br>
 <span class="brace">}</span><br>
 &lt;/script&gt;
 </div>
 <div class="schema-note">
-NB: <span class="warn">geen Review / AggregateRating</span> rond Editorial Review — self-serving review rule Google
+↳ <strong style="color: #fbbf24;">2026 compliant:</strong> CollectionPage (niet WebPage) · itemCondition op elke Offer (NewCondition/RefurbishedCondition/UsedCondition) · AggregateOffer voor multi-supplier listings met lowPrice + offerCount<br>
+↳ <span class="warn">NB: geen Review / AggregateRating</span> rond Editorial Review — self-serving review rule Google. Geen gtin/mpn tenzij daadwerkelijk beschikbaar.
 </div>
 </div>
 
