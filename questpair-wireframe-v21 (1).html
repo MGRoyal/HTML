@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questpair Brand Page Wireframe v21 — Annotated</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-page: #f3f3ee;
+  --bg-card: #ffffff;
+  --bg-card-2: #f8f7f3;
+  --bg-info: #e8f1fb;
+  --bg-warning: #fef3c7;
+  --bg-success: #dcfce7;
+  --text-primary: #1f1f1f;
+  --text-secondary: #595959;
+  --text-tertiary: #8a8a8a;
+  --text-info: #0c4477;
+  --text-warning: #92400e;
+  --border-tertiary: #e5e3dd;
+  --border-secondary: #d4d2cc;
+  --border-info: #93c5fd;
+  --border-info-strong: #2563eb;
+  --kw-color: #dc2626;
+  --kw-bg: #fee2e2;
+  --kw-text-strong: #991b1b;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Monaco, Menlo, Consolas, monospace;
+}
+
+body {
+  font-family: var(--font-system);
+  background: var(--bg-page);
+  color: var(--text-primary);
+  padding: 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.doc-header {
+  max-width: 1280px;
+  margin: 0 auto 24px auto;
+  padding: 24px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 0.5px solid var(--border-tertiary);
+}
+.doc-header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.doc-header p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.doc-header .legend {
+  margin-top: 14px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.doc-header .legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.doc-header .legend .swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 0.5px solid var(--border-tertiary);
+}
+
+.wireframe-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+  background: var(--bg-card-2);
+  border-radius: var(--radius-lg);
+  border: 0.5px solid var(--border-tertiary);
+}
+
+/* Block fundamentals */
+.block {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border-secondary);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 8px;
+}
+.block.block-info {
+  background: var(--bg-info);
+  border-color: var(--border-info);
+}
+.block.block-mono {
+  background: #1a1a1a;
+  color: #d4d4d4;
+  border-color: #333;
+  font-family: var(--font-mono);
+}
+.block.block-mono .label {
+  color: #9ca3af;
+}
+.block.block-secondary {
+  background: var(--bg-card-2);
+  border-color: var(--border-tertiary);
+}
+.block.block-dashed {
+  border-style: dashed;
+}
+
+.label {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.label-info {
+  color: var(--text-info);
+}
+.badge {
+  display: inline-block;
+  background: var(--bg-info);
+  color: var(--text-info);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  margin-left: 4px;
+  font-size: 10px;
+}
+.badge-warning {
+  background: var(--bg-warning);
+  color: var(--text-warning);
+}
+.badge-yellow {
+  background: #fbbf24;
+  color: #1a1a1a;
+}
+
+/* Keyword underline */
+.kw {
+  text-decoration: underline;
+  text-decoration-color: var(--kw-color);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+.kw-note {
+  font-size: 11px;
+  color: var(--kw-color);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.brand-kw {
+  display: inline-block;
+  background: var(--kw-bg);
+  border: 1px solid var(--kw-color);
+  color: var(--kw-text-strong);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.brand-kw-note {
+  font-size: 10px;
+  color: var(--kw-text-strong);
+  font-style: italic;
+  margin-left: 4px;
+}
+
+/* URL bar */
+.url-bar {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border-tertiary);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+.hero-logo {
+  background: var(--bg-card-2);
+  border-radius: var(--radius-md);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  position: relative;
+}
+.hero-logo-alt {
+  position: absolute;
+  bottom: -16px;
+  font-size: 9px;
+  color: var(--text-tertiary);
+  font-style: italic;
+  white-space: nowrap;
+}
+.h1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.subhead {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* Buttons */
+button, .btn {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 0.5px solid var(--border-secondary);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+button:hover, .btn:hover {
+  background: var(--bg-card-2);
+}
+.btn-primary {
+  background: var(--border-info-strong);
+  color: white;
+  border-color: var(--border-info-strong);
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+.btn-mini {
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+/* Trust & sell row */
+.trust-sell-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.trust-strip {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.sell-cta-compact {
+  background: var(--bg-info);
+  border: 0.5px solid var(--border-info);
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sell-cta-compact a {
+  font-size: 12px;
+  color: var(--text-info);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.sell-cta-compact a:hover {
+  text-decoration: underline;
+}
+
+/* Two-column */
+.two-col {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 8px;
+}
+
+/* Left rail */
+.filter-rail {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border-secondary);
+  border-radius: var(--radius-md);
+  padding: 12px;
+}
+.filter-rail-header {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.filter-item {
+  margin-bottom: 12px;
+}
+.filter-name {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.filter-options {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.filter-hidden-note {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Listings */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.listing-card-new {
+  background: var(--bg-card-2);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.listing-photo-single {
+  position: relative;
+  background: linear-gradient(135deg, #d4d4d4 0%, #b8b8b8 100%);
+  height: 100px;
+}
+.listing-photo-multi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: white;
+  height: 100px;
+  position: relative;
+}
+.listing-photo-half {
+  background: linear-gradient(135deg, #d4d4d4 0%, #b8b8b8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: rgba(255,255,255,0.7);
+}
+.listing-photo-half:nth-child(2) {
+  background: linear-gradient(135deg, #c8c8c8 0%, #a0a0a0 100%);
+}
+.listing-overlay-conditions {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 2;
+}
+.condition-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.95);
+  color: var(--text-info);
+  border: 1px solid var(--border-info);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 500;
+}
+.listing-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.85);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+  z-index: 3;
+  cursor: pointer;
+}
+.listing-arrow-left { left: 4px; }
+.listing-arrow-right { right: 4px; }
+.listing-carousel-dots {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3px;
+  z-index: 2;
+}
+.listing-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+}
+.listing-dot.active {
+  background: rgba(255,255,255,0.95);
+}
+.listing-counter {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-size: 9px;
+  color: rgba(255,255,255,0.85);
+  background: rgba(0,0,0,0.4);
+  padding: 1px 4px;
+  border-radius: 2px;
+  z-index: 2;
+}
+.listing-info {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.listing-title {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+.listing-price {
+  font-size: 11px;
+  font-weight: 500;
+}
+.listing-meta {
+  font-size: 9px;
+  color: var(--text-tertiary);
+  line-height: 1.3;
+}
+.listing-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+/* OLD listing card (keep for compat, but won't be used) */
+.listing-card {
+  background: var(--bg-card-2);
+  border-radius: var(--radius-md);
+  height: 80px;
+  padding: 8px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Side-by-side blocks (about + video) */
+.side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.listings-pagination {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* Editorial Review */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.review-meta {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+.review-rating {
+  text-align: right;
+}
+.review-stars {
+  font-size: 16px;
+  color: var(--text-info);
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.benefit-card {
+  background: var(--bg-card-2);
+  border-radius: var(--radius-md);
+  padding: 12px;
+}
+.benefit-title {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.benefit-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+.review-body {
+  background: var(--bg-card-2);
+  border-radius: var(--radius-md);
+  padding: 12px;
+}
+.review-body-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.fade-overlay {
+  height: 24px;
+  background: linear-gradient(transparent, var(--bg-card-2));
+  margin-top: -24px;
+}
+
+/* About brand */
+.preview-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+.preview-note {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.h2 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Video */
+.video-embed {
+  background: var(--bg-card-2);
+  border-radius: var(--radius-md);
+  padding: 30px 10px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+/* Resources */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.resource-tile {
+  background: var(--bg-card-2);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* SEO linking zone */
+.seo-zone {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border-secondary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-top: 12px;
+}
+.seo-section {
+  margin-bottom: 14px;
+}
+.seo-section:last-child {
+  margin-bottom: 0;
+}
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.tile {
+  background: var(--bg-card-2);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  border: 1px solid var(--border-secondary);
+  text-decoration: none;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.tile:hover {
+  border-color: var(--border-info-strong);
+}
+
+/* Sticky CTA */
+.sticky-cta {
+  background: var(--bg-info);
+  border: 2px solid var(--border-info-strong);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  margin-top: 12px;
+}
+.sticky-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.sticky-cta-text {
+  font-size: 12px;
+  color: var(--text-info);
+}
+.sticky-cta-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.sticky-cta-actions a {
+  font-size: 12px;
+  color: var(--text-info);
+  text-decoration: underline;
+}
+
+/* About Questpair */
+.about-questpair-body {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+/* Sell CTA expanded */
+.sell-cta-expanded {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+.sell-cta-text-block {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Schema block content */
+.schema-content {
+  font-size: 11px;
+  line-height: 1.7;
+}
+.schema-content .key { color: #fbbf24; }
+.schema-content .str { color: #a3e635; }
+.schema-content .brace { color: #60a5fa; }
+.schema-content .comment { color: #6b7280; }
+.schema-note {
+  font-size: 10px;
+  color: #9ca3af;
+  margin-top: 10px;
+  line-height: 1.5;
+  font-style: italic;
+}
+.schema-note .warn {
+  color: #f87171;
+}
+</style>
+</head>
+<body>
+
+<!-- DOCUMENT HEADER -->
+<div class="doc-header">
+<h1>Questpair Brand Page · Wireframe v21 (Annotated)</h1>
+<p>Voor Jan Willem (dev), Teun (content) en Anthi (front-end). Geannoteerde wireframe — alle 19 blokken zichtbaar met keyword targets, brand-specific markers, schema/HTML head en single/multi offer listings. Niet voor productie.</p>
+<div class="legend">
+<span><span class="swatch" style="background: var(--bg-info); border-color: var(--border-info);"></span> CTA / actie-blok (blauw)</span>
+<span><span class="swatch" style="background: var(--bg-card);"></span> Content-blok (neutraal)</span>
+<span><span class="swatch" style="background: var(--bg-card-2);"></span> Marketplace-context (grijs)</span>
+<span><span class="swatch" style="background: #1a1a1a;"></span> Dev-only (HTML head &amp; schema)</span>
+<span><span class="kw" style="text-decoration-color: var(--kw-color);">rood onderstreept</span> = SEO modifier-keyword</span>
+<span><span class="brand-kw">BRAND SPECIFIC KW</span> = per brand research vereist</span>
+</div>
+</div>
+
+<div class="wireframe-container">
+
+<!-- BLOCK -1: HTML HEAD -->
+<div class="block block-mono">
+<div class="label">block -1 · html head <span class="badge badge-yellow">invisible · dev only</span></div>
+<div class="schema-content">
+<span class="key">&lt;title&gt;</span> {Brand} Marketplace | Verified Suppliers | Questpair <span class="key">&lt;/title&gt;</span> <span class="comment">// ~55 chars</span><br>
+<span class="key">&lt;meta name="description"&gt;</span> Buy <span class="kw" style="color: #fca5a5;">new</span>, <span class="kw" style="color: #fca5a5;">used</span> &amp; <span class="kw" style="color: #fca5a5;">refurbished</span> {Brand} equipment from verified suppliers worldwide. Compare <span class="kw" style="color: #fca5a5;">prices</span>, request a free quote in 24 hours. Warranty included. <span class="key">&lt;/meta&gt;</span> <span class="comment">// ~146 chars</span><br>
+<span class="key">&lt;link rel="canonical" href=</span><span class="str">"https://questpair.com/brands/{slug}"</span><span class="key"> /&gt;</span><br>
+<span class="key">&lt;meta property="og:title|og:description|og:image|og:url"&gt;</span> ... <br>
+<span class="key">&lt;meta name="twitter:card"&gt;</span> summary_large_image<br>
+<span class="comment">// Image alt strategy: logo alt="{Brand} logo" · listing alt="{Brand} {model} - {condition}"</span>
+</div>
+</div>
+
+<!-- URL BAR -->
+<div class="url-bar">questpair.com/brands/thermo-fisher-scientific</div>
+
+<!-- BLOCK 0: BREADCRUMB -->
+<div class="block block-dashed">
+<div class="label">block 0 · breadcrumb</div>
+</div>
+
+<!-- BLOCK 1: HERO -->
+<div class="block">
+<div class="label">block 1 · hero</div>
+<div class="hero">
+<div class="hero-logo">
+logo
+<div class="hero-logo-alt">alt="{Brand} logo"</div>
+</div>
+<div>
+<div class="h1">H1 · {Brand} <span class="kw">products</span></div>
+<div class="subhead"><span class="kw">New</span>, <span class="kw">Used</span> &amp; <span class="kw">Refurbished</span> {Brand} <span class="kw">instruments</span> &amp; equipment from verified suppliers</div>
+</div>
+<button class="btn-primary">Request quote</button>
+</div>
+</div>
+
+<!-- BLOCK 2: TRUST + SELL -->
+<div class="trust-sell-row">
+<div class="block block-secondary" style="margin-bottom: 0; padding: 8px 16px;">
+<div class="label">block 2a · trust strip</div>
+<div class="trust-strip">
+<span><i class="ti ti-shield-check"></i> Verified suppliers</span>
+<span><i class="ti ti-certificate"></i> Warranty included</span>
+<span><i class="ti ti-truck"></i> Global shipping</span>
+</div>
+</div>
+<div class="sell-cta-compact">
+<div class="label label-info">block 2b · sell cta</div>
+<a href="#"><i class="ti ti-tag"></i> Become a verified seller →</a>
+</div>
+</div>
+
+<!-- TWO-COLUMN -->
+<div class="two-col">
+
+<!-- LEFT RAIL: FILTERS -->
+<div class="filter-rail">
+<div class="filter-rail-header"><i class="ti ti-adjustments"></i> <span class="kw">catalog</span> filter</div>
+
+<div class="filter-item">
+<div class="filter-name">1 · Category</div>
+<div class="filter-options">☐ Mass spec<br>☐ PCR<br>☐ Centrifuges</div>
+</div>
+
+<div class="filter-item">
+<div class="filter-name">2 · Condition</div>
+<div class="filter-options">☐ <span class="kw">New</span><br>☐ <span class="kw">Refurbished</span><br>☐ <span class="kw">Used</span><br>☐ <span class="kw">Parts</span></div>
+</div>
+
+<div class="filter-item">
+<div class="filter-name">3 · Price</div>
+<div class="filter-options">[ range ]</div>
+</div>
+
+<div class="filter-item">
+<div class="filter-name">4 · Year</div>
+<div class="filter-options">[ range ]</div>
+</div>
+
+<div class="filter-item">
+<div class="filter-name">5 · Brand <span class="filter-hidden-note">(auto-hidden)</span></div>
+<div class="filter-options">[ select ]</div>
+</div>
+
+<div class="filter-item">
+<div class="filter-name">6 · Application</div>
+<div class="filter-options">☐ Clinical<br>☐ Research</div>
+</div>
+
+<div class="filter-item">
+<div class="filter-name">7 · Product line</div>
+<div class="filter-options">☐ Series A<br>☐ Series B</div>
+</div>
+
+<div class="filter-item">
+<div class="filter-name">8 · Current location</div>
+<div class="filter-options">[ region ]</div>
+</div>
+
+<div class="filter-item">
+<div class="filter-name">9 · Ships to</div>
+<div class="filter-options">☑ Europe <span style="font-style: italic; font-size: 10px;">(default on)</span><br>☑ USA <span style="font-style: italic; font-size: 10px;">(default on)</span><br>☑ Worldwide <span style="font-style: italic; font-size: 10px;">(default on)</span></div>
+</div>
+
+<div class="filter-item" style="margin-bottom: 0;">
+<div class="filter-name">10 · Warranty</div>
+<div class="filter-options">☐ Warranty optional</div>
+</div>
+</div>
+
+<!-- RIGHT COLUMN -->
+<div>
+
+<!-- BLOCK 5: LISTINGS -->
+<div class="block">
+<div class="label">block 5 · listings · single + multi offer · 40 per page</div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+<div class="h2" style="margin-bottom: 0;">H2 · {Brand} <span class="kw">product list</span></div>
+<div style="font-size: 11px; color: var(--text-secondary);">Sort ▾</div>
+</div>
+<div class="listings-grid">
+
+<!-- Card 1: SINGLE OFFER -->
+<div class="listing-card-new">
+<div class="listing-photo-single">
+<div class="listing-overlay-conditions">
+<span class="condition-badge">Refurbished</span>
+</div>
+<div class="listing-arrow listing-arrow-left">‹</div>
+<div class="listing-arrow listing-arrow-right">›</div>
+<div class="listing-carousel-dots">
+<span class="listing-dot active"></span>
+<span class="listing-dot"></span>
+<span class="listing-dot"></span>
+<span class="listing-dot"></span>
+</div>
+<div class="listing-counter">1/4</div>
+</div>
+<div class="listing-info">
+<div class="listing-title">{Brand} Q Exactive HF</div>
+<div class="listing-price"><span class="kw">Price</span>: €38,500</div>
+<div class="listing-meta">Single offer · 1 supplier</div>
+<div class="listing-footer">
+<button class="btn-primary btn-mini">Quote</button>
+</div>
+</div>
+</div>
+
+<!-- Card 2: MULTI OFFER -->
+<div class="listing-card-new">
+<div class="listing-photo-multi">
+<div class="listing-overlay-conditions">
+<span class="condition-badge">New</span>
+<span class="condition-badge">Refurbished</span>
+</div>
+<div class="listing-photo-half">supplier A</div>
+<div class="listing-photo-half">supplier B</div>
+<div class="listing-arrow listing-arrow-left">‹</div>
+<div class="listing-arrow listing-arrow-right">›</div>
+</div>
+<div class="listing-info">
+<div class="listing-title">{Brand} Orbitrap Eclipse</div>
+<div class="listing-price"><span class="kw">Starting from</span> €52,000</div>
+<div class="listing-meta">Multi offer · 2 verified suppliers</div>
+<div class="listing-footer">
+<button class="btn-primary btn-mini">Quote</button>
+</div>
+</div>
+</div>
+
+<!-- Card 3: SINGLE OFFER -->
+<div class="listing-card-new">
+<div class="listing-photo-single">
+<div class="listing-overlay-conditions">
+<span class="condition-badge">Used</span>
+</div>
+<div class="listing-arrow listing-arrow-left">‹</div>
+<div class="listing-arrow listing-arrow-right">›</div>
+<div class="listing-carousel-dots">
+<span class="listing-dot active"></span>
+<span class="listing-dot"></span>
+<span class="listing-dot"></span>
+</div>
+<div class="listing-counter">1/3</div>
+</div>
+<div class="listing-info">
+<div class="listing-title">{Brand} TSQ Quantis</div>
+<div class="listing-price"><span class="kw">Price</span>: €22,800</div>
+<div class="listing-meta">Single offer · 1 supplier</div>
+<div class="listing-footer">
+<button class="btn-primary btn-mini">Quote</button>
+</div>
+</div>
+</div>
+
+<!-- Card 4: MULTI OFFER -->
+<div class="listing-card-new">
+<div class="listing-photo-multi">
+<div class="listing-overlay-conditions">
+<span class="condition-badge">New</span>
+<span class="condition-badge">Refurbished</span>
+<span class="condition-badge">Used</span>
+</div>
+<div class="listing-photo-half">supplier A</div>
+<div class="listing-photo-half">supplier B</div>
+<div class="listing-arrow listing-arrow-left">‹</div>
+<div class="listing-arrow listing-arrow-right">›</div>
+</div>
+<div class="listing-info">
+<div class="listing-title">{Brand} Vanquish HPLC</div>
+<div class="listing-price"><span class="kw">Starting from</span> €14,500</div>
+<div class="listing-meta">Multi offer · 3 verified suppliers</div>
+<div class="listing-footer">
+<button class="btn-primary btn-mini">Quote</button>
+</div>
+</div>
+</div>
+
+</div>
+<div class="listings-pagination">... 36 more · mix single + multi offer · pagination ...</div>
+</div>
+
+<!-- BLOCK 6: EDITORIAL REVIEW -->
+<div class="block">
+<div class="label">block 6 · editorial review</div>
+<div class="review-header">
+<div>
+<div class="h2" style="margin-bottom: 2px;">H2 · {Brand} <span class="kw">review</span> by Questpair</div>
+<div class="review-meta">By [Author], Equipment Specialist · Last reviewed [date]</div>
+</div>
+<div class="review-rating">
+<div class="review-stars">★★★★½</div>
+<div class="review-meta">4.5 / 5 · Editorial</div>
+</div>
+</div>
+
+<div class="benefits-grid">
+<div class="benefit-card">
+<div class="benefit-title"><i class="ti ti-award"></i> Benefit 1</div>
+<div class="benefit-text">Brand-specifieke claim · 1 zin</div>
+</div>
+<div class="benefit-card">
+<div class="benefit-title"><i class="ti ti-tools"></i> Benefit 2</div>
+<div class="benefit-text">Brand-specifieke claim · 1 zin</div>
+</div>
+<div class="benefit-card">
+<div class="benefit-title"><i class="ti ti-world"></i> Benefit 3</div>
+<div class="benefit-text">Brand-specifieke claim · 1 zin</div>
+</div>
+</div>
+
+<div class="review-body">
+<div class="review-body-text">
+{Brand} has established itself as a reference in laboratory equipment, with a portfolio spanning analytical <span class="kw">instruments</span>, sample preparation...
+</div>
+<div class="fade-overlay"></div>
+<button style="margin-top: 8px; font-size: 11px;"><i class="ti ti-chevron-down"></i> Read full <span class="kw">review</span></button>
+<div class="kw-note">
+↳ <strong>KW targets editorial body (300-500w):</strong> products 2× · instruments 2× · refurbished 1× · used 1× · parts 1×<br>
+↳ <strong>In-text linking:</strong> natural anchor links naar combo pages, product lines, categorieën
+</div>
+</div>
+</div>
+
+<!-- BLOCK 7 + 8 SIDE BY SIDE -->
+<div class="side-by-side">
+
+<!-- BLOCK 7: ABOUT BRAND -->
+<div class="block" style="margin-bottom: 0;">
+<div class="label">block 7 · about {brand} <span class="badge" style="background: var(--bg-card-2); color: var(--text-tertiary);">preview + expand</span></div>
+<div class="h2">H2 · About {Brand}</div>
+<div class="preview-text">
+{Brand} is a leading manufacturer of laboratory <span class="kw">instruments</span> and equipment, founded in [year]. Known for [reputation]. On Questpair you can find <span class="kw">used</span>, <span class="kw">refurbished</span>, and <span class="kw">new</span> {Brand} <span class="kw">products</span> from <span class="kw">distributors</span>, <span class="kw">refurbishers</span>, and <span class="kw">resellers</span>.
+</div>
+<div class="preview-note">~5 regels preview · 80-120 woorden</div>
+<button style="font-size: 11px;"><i class="ti ti-chevron-down"></i> Read full brand description</button>
+<div class="kw-note">
+↳ <strong>KW targets (400-800w):</strong> instruments 2× · products 2× · machine 1× · catalog 1× · <span class="kw">price</span> 1×<br>
+↳ <strong>In-text linking:</strong> natural anchor links naar combo pages
+</div>
+<div style="margin-top: 6px;">
+<span class="brand-kw">+ BRAND SPECIFIC KW</span>
+<span class="brand-kw-note">[per brand keyword research – verplicht]</span>
+</div>
+</div>
+
+<!-- BLOCK 8: VIDEO -->
+<div class="block" style="margin-bottom: 0;">
+<div class="label">block 8 · brand video <span class="badge badge-warning">cond</span></div>
+<div class="h2">H2 · {Brand} videos</div>
+<div class="video-embed" style="padding: 50px 10px;">
+<i class="ti ti-player-play"></i> YouTube embed
+</div>
+<div style="font-size: 10px; color: var(--text-tertiary); font-style: italic; margin-top: 6px;">Renders alleen als brand video URLs heeft · anders neemt About Brand 100% breedte</div>
+</div>
+
+</div>
+
+<!-- BLOCK 9: BRAND RESOURCES -->
+<div class="block">
+<div class="label">block 9 · brand resources</div>
+<div class="h2">H2 · {Brand} resources</div>
+<div class="resources-grid">
+<div class="resource-tile"><i class="ti ti-file-text"></i> <span class="kw">COA</span></div>
+<div class="resource-tile"><i class="ti ti-file-alert"></i> <span class="kw">SDS</span> / <span class="kw">MSDS</span></div>
+<div class="resource-tile"><i class="ti ti-book"></i> <span class="kw">PDF manuals</span></div>
+<div class="resource-tile"><i class="ti ti-tool"></i> <span class="kw">Service</span></div>
+</div>
+</div>
+
+<!-- BLOCK 10: FAQ -->
+<div class="block" style="margin-bottom: 0;">
+<div class="label">block 10 · faq</div>
+<div class="h2">H2 · Frequently asked questions about {Brand}</div>
+<div style="font-size: 11px; color: var(--text-tertiary); line-height: 1.8;">H3 · accordion vragen</div>
+<div class="kw-note">↳ <strong>FAQ vragen over:</strong> <span class="kw">PDF manuals</span> · <span class="kw">price</span> · refurbished vs used · warranty</div>
+</div>
+
+</div>
+</div>
+
+<!-- SEO LINKING ZONE -->
+<div class="seo-zone">
+<div class="label">seo linking zone · tiles</div>
+
+<div class="seo-section">
+<div class="label">block 11 · shop by category</div>
+<div class="h2">H2 · <span class="kw">Shop</span> {Brand} by category</div>
+<div class="tile-grid">
+<a class="tile" href="#">Mass spec</a>
+<a class="tile" href="#">PCR</a>
+<a class="tile" href="#">Centrifuges</a>
+<a class="tile" href="#">+ 8 more</a>
+</div>
+</div>
+
+<div class="seo-section">
+<div class="label">block 12 · shop by application</div>
+<div class="h2">H2 · <span class="kw">Shop</span> {Brand} by application</div>
+<div class="tile-grid">
+<a class="tile" href="#">Clinical</a>
+<a class="tile" href="#">Drug discovery</a>
+<a class="tile" href="#">QC</a>
+<a class="tile" href="#">Education</a>
+</div>
+</div>
+
+<div class="seo-section">
+<div class="label">block 13 · shop by product line <span class="badge badge-warning">cond</span></div>
+<div class="h2">H2 · <span class="kw">Shop</span> {Brand} product lines</div>
+<div class="tile-grid">
+<a class="tile" href="#">Series A</a>
+<a class="tile" href="#">Series B</a>
+<a class="tile" href="#">Series C</a>
+<a class="tile" href="#">Series D</a>
+</div>
+</div>
+
+<div class="seo-section">
+<div class="label">block 14 · related brands</div>
+<div class="h2">H2 · Similar brands</div>
+<div class="tile-grid">
+<a class="tile" href="#">Agilent</a>
+<a class="tile" href="#">Waters</a>
+<a class="tile" href="#">PerkinElmer</a>
+<a class="tile" href="#">Shimadzu</a>
+</div>
+</div>
+</div>
+
+<!-- BLOCK 15: ABOUT QUESTPAIR -->
+<div class="block block-secondary" style="margin-top: 12px;">
+<div class="label">block 15 · about questpair</div>
+<div class="h2">H2 · About Questpair</div>
+<div class="about-questpair-body">
+"Questpair is the marketplace to <span class="kw">shop</span> <span class="kw">new</span>, <span class="kw">used</span>, <span class="kw">refurbished</span>, and <span class="kw">parts</span> equipment from verified <span class="kw">distributors</span>, <span class="kw">refurbishers</span>, and <span class="kw">resellers</span> worldwide."
+</div>
+</div>
+
+<!-- BLOCK 16: SELL CTA EXPANDED -->
+<div class="block block-info" style="margin-top: 8px;">
+<div class="label label-info">block 16 · sell cta</div>
+<div class="sell-cta-expanded">
+<div>
+<div class="h2" style="color: var(--text-info);">H2 · <span class="kw">Sell</span> your {Brand} equipment via Questpair</div>
+<div class="sell-cta-text-block">Reach global buyers · Verified seller program · Hands-off matching</div>
+</div>
+<button>Become a verified seller</button>
+</div>
+</div>
+
+<!-- BLOCK 17: STICKY CTA -->
+<div class="sticky-cta">
+<div class="label label-info">block 17 · sticky cta · 2 actions</div>
+<div class="sticky-cta-inner">
+<span class="sticky-cta-text">Need help finding the right {Brand} equipment?</span>
+<div class="sticky-cta-actions">
+<a href="#">Ask us to find it</a>
+<button class="btn-primary">Request quote</button>
+</div>
+</div>
+</div>
+
+<!-- BLOCK 18: SCHEMA -->
+<div class="block block-mono" style="margin-top: 12px;">
+<div class="label">block 18 · schema logic <span class="badge badge-yellow">invisible · dev only</span></div>
+<div class="schema-content">
+&lt;script type="application/ld+json"&gt;<br>
+<span class="brace">{</span><br>
+&nbsp;&nbsp;<span class="key">"@context"</span>: <span class="str">"https://schema.org"</span>,<br>
+&nbsp;&nbsp;<span class="key">"@graph"</span>: [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="key">"@type"</span>: <span class="str">"Brand"</span> }, BreadcrumbList, ItemList, FAQPage, WebPage, Organization,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// VideoObject (if videos available)</span><br>
+&nbsp;&nbsp;]<br>
+<span class="brace">}</span><br>
+&lt;/script&gt;
+</div>
+<div class="schema-note">
+NB: <span class="warn">geen Review / AggregateRating</span> rond Editorial Review — self-serving review rule Google
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
