@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Questpair Brand Page Wireframe v21 — Annotated</title>
+<title>Questpair Brand Page Wireframe v23 — Annotated</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -482,6 +482,250 @@ button:hover, .btn:hover {
   gap: 8px;
   margin-bottom: 8px;
 }
+
+/* ===== GLOBAL HEADER ===== */
+.global-header-section {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #fef9e7;
+  border: 1px solid #f59e0b;
+  border-radius: var(--radius-md);
+}
+.global-header-section-label {
+  font-size: 11px;
+  color: #92400e;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.global-header-section-label::before {
+  content: 'GLOBAL · applies to all pages';
+  background: #f59e0b;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* Top utility bar */
+.header-utility {
+  background: #f9f7f3;
+  border: 0.5px solid var(--border-tertiary);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+.header-utility a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.header-utility a:hover {
+  text-decoration: underline;
+}
+.currency-switcher {
+  font-weight: 500;
+}
+
+/* USP strip */
+.header-usps {
+  background: var(--bg-info);
+  border: 0.5px solid var(--border-info);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-info);
+  margin-bottom: 6px;
+}
+.header-usps span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dynamic-badge {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 4px;
+}
+
+/* Main bar */
+.header-main {
+  background: white;
+  border: 0.5px solid var(--border-secondary);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.header-logo {
+  background: var(--bg-card-2);
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.header-search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-search {
+  flex: 1;
+  background: var(--bg-card-2);
+  border: 0.5px solid var(--border-secondary);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-find-link {
+  font-size: 12px;
+  color: var(--text-info);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.header-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.header-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: var(--text-secondary);
+}
+.header-action i {
+  font-size: 18px;
+}
+.header-action-label {
+  font-size: 10px;
+}
+.header-badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  background: var(--border-info-strong);
+  color: white;
+  border-radius: 10px;
+  padding: 1px 5px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* Main menu */
+.header-menu {
+  background: white;
+  border: 0.5px solid var(--border-secondary);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 6px;
+}
+.header-menu-item {
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+.header-menu-item.active {
+  border-bottom-color: var(--border-info-strong);
+  color: var(--text-info);
+}
+
+/* Mega menu */
+.mega-menu {
+  background: white;
+  border: 0.5px solid var(--border-info);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  position: relative;
+}
+.mega-menu-arrow {
+  position: absolute;
+  top: -7px;
+  left: 80px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-top: 0.5px solid var(--border-info);
+  border-left: 0.5px solid var(--border-info);
+  transform: rotate(45deg);
+}
+.mega-menu-label {
+  font-size: 11px;
+  color: var(--text-info);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.mega-menu-tile {
+  background: var(--bg-card-2);
+  border: 0.5px solid var(--border-secondary);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+.mega-menu-tile:hover {
+  border-color: var(--border-info-strong);
+}
+.mega-menu-cta {
+  display: flex;
+  justify-content: flex-end;
+}
+.mega-menu-cta a {
+  font-size: 12px;
+  color: var(--text-info);
+  text-decoration: underline;
+}
 .listings-pagination {
   text-align: center;
   font-size: 11px;
@@ -587,6 +831,24 @@ button:hover, .btn:hover {
   padding: 10px;
   font-size: 11px;
   color: var(--text-secondary);
+}
+.resource-tile-conversion {
+  background: var(--bg-info);
+  border: 1px solid var(--border-info-strong);
+  color: var(--text-info);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  position: relative;
+}
+.resource-tile-conversion .conversion-note {
+  display: block;
+  font-size: 9px;
+  color: var(--text-info);
+  font-weight: 400;
+  margin-top: 4px;
+  opacity: 0.85;
 }
 
 /* SEO linking zone */
@@ -703,15 +965,17 @@ button:hover, .btn:hover {
 
 <!-- DOCUMENT HEADER -->
 <div class="doc-header">
-<h1>Questpair Brand Page · Wireframe v21 (Annotated)</h1>
-<p>Voor Jan Willem (dev), Teun (content) en Anthi (front-end). Geannoteerde wireframe — alle 19 blokken zichtbaar met keyword targets, brand-specific markers, schema/HTML head en single/multi offer listings. Niet voor productie.</p>
+<h1>Questpair Brand Page · Wireframe v23 (Annotated)</h1>
+<p>Voor Jan Willem (dev), Teun (content) en Anthi (front-end). Geannoteerde wireframe — globale header (blocks A-E, site-wide), HTML head, alle brand-page blokken met keyword targets, brand-specific markers, schema en single/multi offer listings. Niet voor productie.</p>
 <div class="legend">
+<span><span class="swatch" style="background: #fef9e7; border-color: #f59e0b;"></span> Global header (site-wide)</span>
 <span><span class="swatch" style="background: var(--bg-info); border-color: var(--border-info);"></span> CTA / actie-blok (blauw)</span>
 <span><span class="swatch" style="background: var(--bg-card);"></span> Content-blok (neutraal)</span>
 <span><span class="swatch" style="background: var(--bg-card-2);"></span> Marketplace-context (grijs)</span>
 <span><span class="swatch" style="background: #1a1a1a;"></span> Dev-only (HTML head &amp; schema)</span>
 <span><span class="kw" style="text-decoration-color: var(--kw-color);">rood onderstreept</span> = SEO modifier-keyword</span>
 <span><span class="brand-kw">BRAND SPECIFIC KW</span> = per brand research vereist</span>
+<span><span class="dynamic-badge">dynamic</span> = data variabel per gebruiker (geolocatie/sessie)</span>
 </div>
 </div>
 
@@ -732,6 +996,99 @@ button:hover, .btn:hover {
 
 <!-- URL BAR -->
 <div class="url-bar">questpair.com/brands/thermo-fisher-scientific</div>
+
+<!-- GLOBAL HEADER -->
+<div class="global-header-section">
+<div class="global-header-section-label">global header · blocks A · C · D · E · zit boven alle pages, niet alleen brand page</div>
+
+<!-- A: Top utility bar -->
+<div class="header-utility">
+<span class="currency-switcher">💱 EUR ▾</span>
+<a href="#">Contact</a>
+<a href="#">Sign in</a>
+<a href="#">Sign up</a>
+<span class="dynamic-badge" style="font-size: 9px;">Sign in/up only when logged out</span>
+</div>
+<div class="kw-note" style="margin: -4px 0 8px 0;">
+↳ <strong>block A · top utility</strong> · Currency switcher (EUR/USD/GBP/JPY/CNY) · Contact link · Sign in/up
+</div>
+
+<!-- C: Main bar -->
+<div class="header-main">
+<div class="header-logo">QUESTPAIR</div>
+<div class="header-search-wrapper">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+<div class="header-search">
+<i class="ti ti-search"></i> Search lab equipment, brands, models...
+</div>
+<div style="font-size: 11px; color: var(--text-tertiary); padding-left: 4px;">
+We offer the best quotes for <span class="kw">new</span>, <span class="kw">used</span>, <span class="kw">refurbished</span> scientific <span class="kw">instruments</span>
+</div>
+</div>
+<a href="#" class="header-find-link"><i class="ti ti-message-circle"></i> Let us find it</a>
+</div>
+<div class="header-actions">
+<a href="#" class="header-action">
+<i class="ti ti-heart"></i>
+<span class="header-action-label">Saved</span>
+<span class="header-badge">3</span>
+</a>
+<a href="#" class="header-action">
+<i class="ti ti-clipboard-list"></i>
+<span class="header-action-label">Quote basket</span>
+<span class="header-badge">2</span>
+</a>
+<a href="#" class="header-action">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-2a4 4 0 0 1 4 -4h5a4 4 0 0 1 4 4v2"/></svg>
+<span class="header-action-label">Account</span>
+<span class="dynamic-badge" style="display: block; margin-top: 2px;">when logged in</span>
+</a>
+</div>
+</div>
+<div class="kw-note" style="margin: -4px 0 8px 0;">
+↳ <strong>block C · main bar</strong> · Logo (home link) · Searchbar + quote-claim onder · "Let us find it" → /find · Saved (wishlist) · Quote basket (RFQ list, vervangt "cart") · Account dropdown
+</div>
+
+<!-- D: Main menu -->
+<div class="header-menu">
+<a href="#" class="header-menu-item active">Categories</a>
+<a href="#" class="header-menu-item">Brands</a>
+<a href="#" class="header-menu-item">Products</a>
+<a href="#" class="header-menu-item">Applications</a>
+<a href="#" class="header-menu-item">Buying Guides</a>
+<a href="#" class="header-menu-item">Sell Equipment</a>
+</div>
+<div class="kw-note" style="margin: -4px 0 8px 0;">
+↳ <strong>block D · main menu</strong> · 6 items · Categories/Brands/Applications → mega menu op hover · Products → /search-products (zelfde page als search submit) · Buying Guides → content hub · Sell Equipment → /sell page direct
+</div>
+
+<!-- E: Mega menu example (Brands) -->
+<div class="mega-menu">
+<div class="mega-menu-arrow"></div>
+<div class="mega-menu-label">↳ Brands menu (example state · hover/tap on Brands)</div>
+<div class="mega-menu-grid">
+<a class="mega-menu-tile">Thermo Fisher</a>
+<a class="mega-menu-tile">Agilent</a>
+<a class="mega-menu-tile">Waters</a>
+<a class="mega-menu-tile">Shimadzu</a>
+<a class="mega-menu-tile">PerkinElmer</a>
+<a class="mega-menu-tile">Bio-Rad</a>
+<a class="mega-menu-tile">Beckman Coulter</a>
+<a class="mega-menu-tile">Eppendorf</a>
+<a class="mega-menu-tile">Bruker</a>
+<a class="mega-menu-tile">Leica</a>
+<a class="mega-menu-tile">Mettler Toledo</a>
+<a class="mega-menu-tile">Sartorius</a>
+</div>
+<div class="mega-menu-cta">
+<a href="#">View all brands →</a>
+</div>
+</div>
+<div class="kw-note" style="margin: 8px 0 0 0;">
+↳ <strong>block E · mega menu</strong> · pattern: top 12 items + "View all" CTA · zelfde voor Categories (top 8-12) en Applications (top 6-8)
+</div>
+
+</div>
 
 <!-- BLOCK 0: BREADCRUMB -->
 <div class="block block-dashed">
@@ -760,8 +1117,8 @@ logo
 <div class="label">block 2a · trust strip</div>
 <div class="trust-strip">
 <span><i class="ti ti-shield-check"></i> Verified suppliers</span>
-<span><i class="ti ti-certificate"></i> Warranty included</span>
-<span><i class="ti ti-truck"></i> Global shipping</span>
+<span><i class="ti ti-certificate"></i> Warranty optional</span>
+<span><i class="ti ti-truck"></i> We ship to The Netherlands 🇳🇱 <span class="dynamic-badge">dynamic</span></span>
 </div>
 </div>
 <div class="sell-cta-compact">
@@ -808,22 +1165,35 @@ logo
 </div>
 
 <div class="filter-item">
-<div class="filter-name">7 · Product line</div>
-<div class="filter-options">☐ Series A<br>☐ Series B</div>
+<div class="filter-name">7 · <span class="kw">Model</span> <span class="filter-hidden-note">(auto-hidden if no models)</span></div>
+<div class="filter-options">
+☐ Orbitrap Eclipse<br>
+☐ Q Exactive Focus<br>
+☐ Q Exactive HF<br>
+☐ Q Exactive Plus<br>
+☐ TSQ Quantis<br>
+☐ Vanquish HPLC<br>
+<span style="font-size: 10px; color: var(--text-info); font-style: italic;">Show 4 more ▾</span>
+</div>
 </div>
 
 <div class="filter-item">
-<div class="filter-name">8 · Current location</div>
+<div class="filter-name">8 · Product line <span class="filter-hidden-note">(auto-hidden if no lines)</span></div>
+<div class="filter-options">☐ Orbitrap series<br>☐ Q Exactive series<br>☐ TSQ series</div>
+</div>
+
+<div class="filter-item">
+<div class="filter-name">9 · Current location</div>
 <div class="filter-options">[ region ]</div>
 </div>
 
 <div class="filter-item">
-<div class="filter-name">9 · Ships to</div>
+<div class="filter-name">10 · Ships to</div>
 <div class="filter-options">☑ Europe <span style="font-style: italic; font-size: 10px;">(default on)</span><br>☑ USA <span style="font-style: italic; font-size: 10px;">(default on)</span><br>☑ Worldwide <span style="font-style: italic; font-size: 10px;">(default on)</span></div>
 </div>
 
 <div class="filter-item" style="margin-bottom: 0;">
-<div class="filter-name">10 · Warranty</div>
+<div class="filter-name">11 · Warranty</div>
 <div class="filter-options">☐ Warranty optional</div>
 </div>
 </div>
@@ -842,19 +1212,21 @@ logo
 
 <!-- Card 1: SINGLE OFFER -->
 <div class="listing-card-new">
-<div class="listing-photo-single">
+<div class="listing-photo-multi">
 <div class="listing-overlay-conditions">
 <span class="condition-badge">Refurbished</span>
 </div>
+<div class="listing-photo-half">photo 1</div>
+<div class="listing-photo-half">photo 2</div>
 <div class="listing-arrow listing-arrow-left">‹</div>
 <div class="listing-arrow listing-arrow-right">›</div>
 <div class="listing-carousel-dots">
 <span class="listing-dot active"></span>
-<span class="listing-dot"></span>
+<span class="listing-dot active"></span>
 <span class="listing-dot"></span>
 <span class="listing-dot"></span>
 </div>
-<div class="listing-counter">1/4</div>
+<div class="listing-counter">1-2/4</div>
 </div>
 <div class="listing-info">
 <div class="listing-title">{Brand} Q Exactive HF</div>
@@ -890,18 +1262,20 @@ logo
 
 <!-- Card 3: SINGLE OFFER -->
 <div class="listing-card-new">
-<div class="listing-photo-single">
+<div class="listing-photo-multi">
 <div class="listing-overlay-conditions">
 <span class="condition-badge">Used</span>
 </div>
+<div class="listing-photo-half">photo 1</div>
+<div class="listing-photo-half">photo 2</div>
 <div class="listing-arrow listing-arrow-left">‹</div>
 <div class="listing-arrow listing-arrow-right">›</div>
 <div class="listing-carousel-dots">
 <span class="listing-dot active"></span>
-<span class="listing-dot"></span>
+<span class="listing-dot active"></span>
 <span class="listing-dot"></span>
 </div>
-<div class="listing-counter">1/3</div>
+<div class="listing-counter">1-2/3</div>
 </div>
 <div class="listing-info">
 <div class="listing-title">{Brand} TSQ Quantis</div>
@@ -940,13 +1314,63 @@ logo
 <div class="listings-pagination">... 36 more · mix single + multi offer · pagination ...</div>
 </div>
 
-<!-- BLOCK 6: EDITORIAL REVIEW -->
+<!-- BLOCK 6: REVIEW (TWO VARIANTS) -->
 <div class="block">
-<div class="label">block 6 · editorial review</div>
+<div class="label">block 6 · review · twee varianten — conditionele render</div>
+
+<!-- Variant explainer -->
+<div style="background: var(--bg-card-2); border-radius: var(--radius-md); padding: 10px; margin-bottom: 12px; font-size: 11px; color: var(--text-secondary);">
+<strong>Conditionele rendering:</strong>
+<div style="margin-top: 4px; line-height: 1.6;">
+↳ <strong>Variant A · Questpair review</strong> (default, AI-generated) — voor brands zonder Teun review<br>
+↳ <strong>Variant B · Editorial review</strong> (Teun heeft handmatig reviewed) — voor top 30 brands<br>
+↳ <strong>Skip</strong> — voor lege brands (0 listings ≥ 180 dagen)
+</div>
+</div>
+
+<!-- VARIANT A: Questpair review (default) -->
+<div style="border: 1px dashed var(--border-secondary); border-radius: var(--radius-md); padding: 12px; margin-bottom: 12px;">
+<div class="label" style="color: var(--text-secondary); margin-bottom: 8px;">▸ variant A · questpair review (default, AI-generated)</div>
+<div class="review-header">
+<div>
+<div class="h2" style="margin-bottom: 2px;">H2 · Questpair <span class="kw">review</span> of {Brand}</div>
+<div class="review-meta">Marketplace insights based on listings data and supplier feedback</div>
+<div class="review-meta" style="margin-top: 2px;">Reviewed by Questpair editorial team</div>
+</div>
+<div style="font-size: 10px; color: var(--text-tertiary); font-style: italic;">geen ster-rating</div>
+</div>
+
+<div class="benefits-grid" style="margin-top: 10px;">
+<div class="benefit-card">
+<div class="benefit-title"><i class="ti ti-award"></i> Benefit 1</div>
+<div class="benefit-text">Brand-specifieke gefactualiseerde claim · 1 zin</div>
+</div>
+<div class="benefit-card">
+<div class="benefit-title"><i class="ti ti-tools"></i> Benefit 2</div>
+<div class="benefit-text">Brand-specifieke gefactualiseerde claim · 1 zin</div>
+</div>
+<div class="benefit-card">
+<div class="benefit-title"><i class="ti ti-world"></i> Benefit 3</div>
+<div class="benefit-text">Brand-specifieke gefactualiseerde claim · 1 zin</div>
+</div>
+</div>
+
+<div class="review-body" style="margin-top: 10px;">
+<div class="review-body-text">
+{Brand} manufactures mass spectrometers and analytical <span class="kw">instruments</span> for clinical and research labs. Typical refurbished prices range from €X to €Y...
+</div>
+<div class="fade-overlay"></div>
+<button style="margin-top: 8px; font-size: 11px;"><i class="ti ti-chevron-down"></i> Read full <span class="kw">review</span></button>
+</div>
+</div>
+
+<!-- VARIANT B: Editorial review (Teun reviewed) -->
+<div style="border: 2px solid var(--border-info-strong); border-radius: var(--radius-md); padding: 12px;">
+<div class="label" style="color: var(--text-info); margin-bottom: 8px;">▸ variant B · editorial review (Teun heeft reviewed) <span class="badge" style="background: var(--bg-info); color: var(--text-info);">verified editorial</span></div>
 <div class="review-header">
 <div>
 <div class="h2" style="margin-bottom: 2px;">H2 · {Brand} <span class="kw">review</span> by Questpair</div>
-<div class="review-meta">By [Author], Equipment Specialist · Last reviewed [date]</div>
+<div class="review-meta">By Teun [Lastname], Equipment Specialist · Last reviewed [date]</div>
 </div>
 <div class="review-rating">
 <div class="review-stars">★★★★½</div>
@@ -954,31 +1378,35 @@ logo
 </div>
 </div>
 
-<div class="benefits-grid">
+<div class="benefits-grid" style="margin-top: 10px;">
 <div class="benefit-card">
 <div class="benefit-title"><i class="ti ti-award"></i> Benefit 1</div>
-<div class="benefit-text">Brand-specifieke claim · 1 zin</div>
+<div class="benefit-text">Brand-specifieke claim · Teun heeft toegevoegd</div>
 </div>
 <div class="benefit-card">
 <div class="benefit-title"><i class="ti ti-tools"></i> Benefit 2</div>
-<div class="benefit-text">Brand-specifieke claim · 1 zin</div>
+<div class="benefit-text">Brand-specifieke claim · Teun heeft toegevoegd</div>
 </div>
 <div class="benefit-card">
 <div class="benefit-title"><i class="ti ti-world"></i> Benefit 3</div>
-<div class="benefit-text">Brand-specifieke claim · 1 zin</div>
+<div class="benefit-text">Brand-specifieke claim · Teun heeft toegevoegd</div>
 </div>
 </div>
 
-<div class="review-body">
+<div class="review-body" style="margin-top: 10px;">
 <div class="review-body-text">
-{Brand} has established itself as a reference in laboratory equipment, with a portfolio spanning analytical <span class="kw">instruments</span>, sample preparation...
+{Brand} has established itself as a reference in laboratory equipment, with concrete strengths in [model X] and known weaknesses in [aspect Y]. Refurbished <span class="kw">instruments</span> retain value...
 </div>
 <div class="fade-overlay"></div>
 <button style="margin-top: 8px; font-size: 11px;"><i class="ti ti-chevron-down"></i> Read full <span class="kw">review</span></button>
-<div class="kw-note">
-↳ <strong>KW targets editorial body (300-500w):</strong> products 2× · instruments 2× · refurbished 1× · used 1× · parts 1×<br>
-↳ <strong>In-text linking:</strong> natural anchor links naar combo pages, product lines, categorieën
 </div>
+</div>
+
+<div class="kw-note" style="margin-top: 12px;">
+↳ <strong>KW targets review body (300-500w):</strong> products 2× · instruments 2× · refurbished 1× · used 1× · parts 1×<br>
+↳ <strong>In-text linking:</strong> natural anchor links naar combo pages, product lines, categorieën<br>
+↳ <strong>Anti-AI-detection eisen:</strong> geen "In the world of...", geen "renowned manufacturer", variabele paragraaf-lengtes, concrete data verplicht<br>
+↳ <strong>Author schema:</strong> Variant A = Organization (Questpair) · Variant B = Person (Teun) cross-ref naar /authors/teun
 </div>
 </div>
 
@@ -1023,17 +1451,37 @@ logo
 <div class="resources-grid">
 <div class="resource-tile"><i class="ti ti-file-text"></i> <span class="kw">COA</span></div>
 <div class="resource-tile"><i class="ti ti-file-alert"></i> <span class="kw">SDS</span> / <span class="kw">MSDS</span></div>
-<div class="resource-tile"><i class="ti ti-book"></i> <span class="kw">PDF manuals</span></div>
+<div class="resource-tile-conversion">
+<i class="ti ti-book"></i> <span class="kw" style="text-decoration-color: white;">PDF manuals</span>
+<span class="conversion-note">Free download · Email required</span>
+</div>
 <div class="resource-tile"><i class="ti ti-tool"></i> <span class="kw">Service</span></div>
 </div>
+<div class="kw-note">↳ <strong>PDF manuals = lead-gen conversiepunt</strong> · Klik opent modal met email-veld + marketing consent checkbox · PDF wordt via mail bezorgd · GDPR-compliant double opt-in</div>
 </div>
 
 <!-- BLOCK 10: FAQ -->
 <div class="block" style="margin-bottom: 0;">
-<div class="label">block 10 · faq</div>
+<div class="label">block 10 · faq · 12 vragen voor GEO/AI coverage</div>
 <div class="h2">H2 · Frequently asked questions about {Brand}</div>
-<div style="font-size: 11px; color: var(--text-tertiary); line-height: 1.8;">H3 · accordion vragen</div>
-<div class="kw-note">↳ <strong>FAQ vragen over:</strong> <span class="kw">PDF manuals</span> · <span class="kw">price</span> · refurbished vs used · warranty</div>
+<div style="font-size: 11px; color: var(--text-secondary); line-height: 1.7;">
+<div style="margin-bottom: 4px;">▸ <strong>1.</strong> Where can I find {Brand} <span class="kw">manuals</span>?</div>
+<div style="margin-bottom: 4px;">▸ <strong>2.</strong> What are typical {Brand} <span class="kw">prices</span>?</div>
+<div style="margin-bottom: 4px;">▸ <strong>3.</strong> What's the difference between <span class="kw">refurbished</span> and <span class="kw">used</span> {Brand}?</div>
+<div style="margin-bottom: 4px;">▸ <strong>4.</strong> What warranty comes with refurbished {Brand} equipment?</div>
+<div style="margin-bottom: 4px;">▸ <strong>5.</strong> Is {Brand} good for [research/clinical/QC]?</div>
+<div style="margin-bottom: 4px;">▸ <strong>6.</strong> How long does {Brand} {category} typically last?</div>
+<div style="margin-bottom: 4px;">▸ <strong>7.</strong> Can I get <span class="kw">service</span> for older {Brand} equipment?</div>
+<div style="margin-bottom: 4px;">▸ <strong>8.</strong> Where can I buy <span class="kw">parts</span> for {Brand} equipment?</div>
+<div style="margin-bottom: 4px;">▸ <strong>9.</strong> What are the best alternatives to {Brand}?</div>
+<div style="margin-bottom: 4px;">▸ <strong>10.</strong> What's the typical lead time for {Brand} refurbished equipment?</div>
+<div style="margin-bottom: 4px;">▸ <strong>11.</strong> What's the difference between {Brand} {model A} and {model B}?</div>
+<div style="margin-bottom: 4px;">▸ <strong>12.</strong> Does {Brand} equipment ship internationally?</div>
+</div>
+<div class="kw-note" style="margin-top: 8px;">
+↳ <strong>12 vragen voor GEO/AI Overview coverage</strong> · KW dekking: <span class="kw">manuals</span> · <span class="kw">price</span> · <span class="kw">refurbished</span> · <span class="kw">used</span> · <span class="kw">parts</span> · <span class="kw">service</span> · warranty<br>
+↳ <strong>Antwoorden:</strong> direct in 1-3 zinnen voor AI Overview extraction (geen lange intro's)
+</div>
 </div>
 
 </div>
@@ -1041,32 +1489,22 @@ logo
 
 <!-- SEO LINKING ZONE -->
 <div class="seo-zone">
-<div class="label">seo linking zone · tiles</div>
+<div class="label">seo linking zone · tiles · 3 blocks</div>
 
 <div class="seo-section">
-<div class="label">block 11 · shop by category</div>
-<div class="h2">H2 · <span class="kw">Shop</span> {Brand} by category</div>
+<div class="label">block 11 · popular brand categories · <em>combo pages with dynamic breadcrumb</em></div>
+<div class="h2">H2 · Popular {Brand} categories</div>
 <div class="tile-grid">
 <a class="tile" href="#">Mass spec</a>
 <a class="tile" href="#">PCR</a>
 <a class="tile" href="#">Centrifuges</a>
 <a class="tile" href="#">+ 8 more</a>
 </div>
+<div style="font-size: 10px; color: var(--text-tertiary); font-style: italic; margin-top: 6px;">Tiles → combo URLs (/brands/{slug}/{category-slug}) · breadcrumb dynamisch op combo page</div>
 </div>
 
 <div class="seo-section">
-<div class="label">block 12 · shop by application</div>
-<div class="h2">H2 · <span class="kw">Shop</span> {Brand} by application</div>
-<div class="tile-grid">
-<a class="tile" href="#">Clinical</a>
-<a class="tile" href="#">Drug discovery</a>
-<a class="tile" href="#">QC</a>
-<a class="tile" href="#">Education</a>
-</div>
-</div>
-
-<div class="seo-section">
-<div class="label">block 13 · shop by product line <span class="badge badge-warning">cond</span></div>
+<div class="label">block 12 · shop product lines <span class="badge badge-warning">cond</span></div>
 <div class="h2">H2 · <span class="kw">Shop</span> {Brand} product lines</div>
 <div class="tile-grid">
 <a class="tile" href="#">Series A</a>
@@ -1074,11 +1512,12 @@ logo
 <a class="tile" href="#">Series C</a>
 <a class="tile" href="#">Series D</a>
 </div>
+<div style="font-size: 10px; color: var(--text-tertiary); font-style: italic; margin-top: 6px;">Alleen renderen als brand ≥1 product line heeft (~131 van 544 brands)</div>
 </div>
 
 <div class="seo-section">
-<div class="label">block 14 · related brands</div>
-<div class="h2">H2 · Similar brands</div>
+<div class="label">block 13 · shop similar brands</div>
+<div class="h2">H2 · <span class="kw">Shop</span> similar brands</div>
 <div class="tile-grid">
 <a class="tile" href="#">Agilent</a>
 <a class="tile" href="#">Waters</a>
@@ -1086,11 +1525,57 @@ logo
 <a class="tile" href="#">Shimadzu</a>
 </div>
 </div>
+
+<div class="seo-section">
+<div class="label">block 13b · best models comparison <span class="badge badge-warning">cond · post-MVP</span></div>
+<div class="h2">H2 · Most popular {Brand} models compared</div>
+<div style="overflow-x: auto; margin-top: 8px;">
+<table style="width: 100%; border-collapse: collapse; font-size: 11px;">
+<thead>
+<tr style="background: var(--bg-card-2); border-bottom: 0.5px solid var(--border-secondary);">
+<th style="text-align: left; padding: 8px; font-weight: 500;">Model</th>
+<th style="text-align: left; padding: 8px; font-weight: 500;">Category</th>
+<th style="text-align: left; padding: 8px; font-weight: 500;"><span class="kw">Used</span></th>
+<th style="text-align: left; padding: 8px; font-weight: 500;"><span class="kw">Refurbished</span></th>
+<th style="text-align: left; padding: 8px; font-weight: 500;">Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 0.5px solid var(--border-tertiary);">
+<td style="padding: 8px;">Q Exactive HF</td>
+<td style="padding: 8px; color: var(--text-secondary);">Mass spec</td>
+<td style="padding: 8px;">€28-35k</td>
+<td style="padding: 8px;">€38-45k</td>
+<td style="padding: 8px; color: var(--text-secondary);">Proteomics</td>
+</tr>
+<tr style="border-bottom: 0.5px solid var(--border-tertiary);">
+<td style="padding: 8px;">Orbitrap Eclipse</td>
+<td style="padding: 8px; color: var(--text-secondary);">Mass spec</td>
+<td style="padding: 8px;">€45-55k</td>
+<td style="padding: 8px;">€58-68k</td>
+<td style="padding: 8px; color: var(--text-secondary);">Top-down protein analysis</td>
+</tr>
+<tr>
+<td style="padding: 8px;">Vanquish HPLC</td>
+<td style="padding: 8px; color: var(--text-secondary);">HPLC</td>
+<td style="padding: 8px;">€12-18k</td>
+<td style="padding: 8px;">€14-22k</td>
+<td style="padding: 8px; color: var(--text-secondary);">Analytical chemistry</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="kw-note" style="margin-top: 8px;">
+↳ <strong>Hoge waarde voor AI Overview / GEO features 2026</strong> · directe answer extraction · comparison data per brand<br>
+↳ <strong>Database vereisten:</strong> per brand → top 3-5 modellen + categorie + used/refurbished price ranges + use case<br>
+↳ <strong>Phasing:</strong> post-MVP — wordt later gebouwd · MVP toont "Coming soon" placeholder of skip blok
+</div>
+</div>
 </div>
 
 <!-- BLOCK 15: ABOUT QUESTPAIR -->
 <div class="block block-secondary" style="margin-top: 12px;">
-<div class="label">block 15 · about questpair</div>
+<div class="label">block 14 · about questpair</div>
 <div class="h2">H2 · About Questpair</div>
 <div class="about-questpair-body">
 "Questpair is the marketplace to <span class="kw">shop</span> <span class="kw">new</span>, <span class="kw">used</span>, <span class="kw">refurbished</span>, and <span class="kw">parts</span> equipment from verified <span class="kw">distributors</span>, <span class="kw">refurbishers</span>, and <span class="kw">resellers</span> worldwide."
@@ -1099,7 +1584,7 @@ logo
 
 <!-- BLOCK 16: SELL CTA EXPANDED -->
 <div class="block block-info" style="margin-top: 8px;">
-<div class="label label-info">block 16 · sell cta</div>
+<div class="label label-info">block 15 · sell cta</div>
 <div class="sell-cta-expanded">
 <div>
 <div class="h2" style="color: var(--text-info);">H2 · <span class="kw">Sell</span> your {Brand} equipment via Questpair</div>
@@ -1111,7 +1596,7 @@ logo
 
 <!-- BLOCK 17: STICKY CTA -->
 <div class="sticky-cta">
-<div class="label label-info">block 17 · sticky cta · 2 actions</div>
+<div class="label label-info">block 16 · sticky cta · 2 actions</div>
 <div class="sticky-cta-inner">
 <span class="sticky-cta-text">Need help finding the right {Brand} equipment?</span>
 <div class="sticky-cta-actions">
@@ -1123,7 +1608,7 @@ logo
 
 <!-- BLOCK 18: SCHEMA -->
 <div class="block block-mono" style="margin-top: 12px;">
-<div class="label">block 18 · schema logic <span class="badge badge-yellow">invisible · dev only</span></div>
+<div class="label">block 17 · schema logic <span class="badge badge-yellow">invisible · dev only</span></div>
 <div class="schema-content">
 &lt;script type="application/ld+json"&gt;<br>
 <span class="brace">{</span><br>
