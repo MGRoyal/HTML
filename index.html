@@ -1343,21 +1343,21 @@ logo
 <div class="benefits-grid" style="margin-top: 10px;">
 <div class="benefit-card">
 <div class="benefit-title"><i class="ti ti-award"></i> Benefit 1</div>
-<div class="benefit-text">Brand-specifieke gefactualiseerde claim · 1 zin</div>
+<div class="benefit-text">{review_key_benefit_1}</div>
 </div>
 <div class="benefit-card">
 <div class="benefit-title"><i class="ti ti-tools"></i> Benefit 2</div>
-<div class="benefit-text">Brand-specifieke gefactualiseerde claim · 1 zin</div>
+<div class="benefit-text">{review_key_benefit_2}</div>
 </div>
 <div class="benefit-card">
 <div class="benefit-title"><i class="ti ti-world"></i> Benefit 3</div>
-<div class="benefit-text">Brand-specifieke gefactualiseerde claim · 1 zin</div>
+<div class="benefit-text">{review_key_benefit_3}</div>
 </div>
 </div>
 
 <div class="review-body" style="margin-top: 10px;">
 <div class="review-body-text">
-{Brand} manufactures mass spectrometers and analytical <span class="kw">instruments</span> for clinical and research labs. Typical refurbished prices range from €X to €Y...
+{review_combined_description}
 </div>
 <div class="fade-overlay"></div>
 <button style="margin-top: 8px; font-size: 11px;"><i class="ti ti-chevron-down"></i> Read full <span class="kw">review</span></button>
@@ -1366,36 +1366,36 @@ logo
 
 <!-- VARIANT B: Editorial review (Teun reviewed) -->
 <div style="border: 2px solid var(--border-info-strong); border-radius: var(--radius-md); padding: 12px;">
-<div class="label" style="color: var(--text-info); margin-bottom: 8px;">▸ variant B · editorial review (Teun heeft reviewed) <span class="badge" style="background: var(--bg-info); color: var(--text-info);">verified editorial</span></div>
+<div class="label" style="color: var(--text-info); margin-bottom: 8px;">▸ variant B · editorial review (Teun heeft reviewed) <span class="badge" style="background: var(--bg-info); color: var(--text-info);">{review_verified_badge}</span></div>
 <div class="review-header">
 <div>
 <div class="h2" style="margin-bottom: 2px;">H2 · {Brand} <span class="kw">review</span> by Questpair</div>
-<div class="review-meta">By Teun [Lastname], Equipment Specialist · Last reviewed [date]</div>
+<div class="review-meta">By {review_author_entity}, {review_reviewer_credentials} · Last reviewed {review_date}</div>
 </div>
 <div class="review-rating">
-<div class="review-stars">★★★★½</div>
-<div class="review-meta">4.5 / 5 · Editorial</div>
+<div class="review-stars">{review_star_rating}</div>
+<div class="review-meta">Editorial</div>
 </div>
 </div>
 
 <div class="benefits-grid" style="margin-top: 10px;">
 <div class="benefit-card">
 <div class="benefit-title"><i class="ti ti-award"></i> Benefit 1</div>
-<div class="benefit-text">Brand-specifieke claim · Teun heeft toegevoegd</div>
+<div class="benefit-text">{review_key_benefit_1}</div>
 </div>
 <div class="benefit-card">
 <div class="benefit-title"><i class="ti ti-tools"></i> Benefit 2</div>
-<div class="benefit-text">Brand-specifieke claim · Teun heeft toegevoegd</div>
+<div class="benefit-text">{review_key_benefit_2}</div>
 </div>
 <div class="benefit-card">
 <div class="benefit-title"><i class="ti ti-world"></i> Benefit 3</div>
-<div class="benefit-text">Brand-specifieke claim · Teun heeft toegevoegd</div>
+<div class="benefit-text">{review_key_benefit_3}</div>
 </div>
 </div>
 
 <div class="review-body" style="margin-top: 10px;">
 <div class="review-body-text">
-{Brand} has established itself as a reference in laboratory equipment, with concrete strengths in [model X] and known weaknesses in [aspect Y]. Refurbished <span class="kw">instruments</span> retain value...
+{review_editorial_description}
 </div>
 <div class="fade-overlay"></div>
 <button style="margin-top: 8px; font-size: 11px;"><i class="ti ti-chevron-down"></i> Read full <span class="kw">review</span></button>
@@ -1418,7 +1418,7 @@ logo
 <div class="label">block 7 · about {brand} <span class="badge" style="background: var(--bg-card-2); color: var(--text-tertiary);">preview + expand</span></div>
 <div class="h2">H2 · About {Brand}</div>
 <div class="preview-text">
-{Brand} is a leading manufacturer of laboratory <span class="kw">instruments</span> and equipment, founded in [year]. Known for [reputation]. On Questpair you can find <span class="kw">used</span>, <span class="kw">refurbished</span>, and <span class="kw">new</span> {Brand} <span class="kw">products</span> from <span class="kw">distributors</span>, <span class="kw">refurbishers</span>, and <span class="kw">resellers</span>.
+{brand_combined_description}
 </div>
 <div class="preview-note">~5 regels preview · 80-120 woorden</div>
 <button style="font-size: 11px;"><i class="ti ti-chevron-down"></i> Read full brand description</button>
@@ -1465,18 +1465,18 @@ logo
 <div class="label">block 10 · faq · 12 vragen voor GEO/AI coverage</div>
 <div class="h2">H2 · Frequently asked questions about {Brand}</div>
 <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.7;">
-<div style="margin-bottom: 4px;">▸ <strong>1.</strong> Where can I find {Brand} <span class="kw">manuals</span>?</div>
-<div style="margin-bottom: 4px;">▸ <strong>2.</strong> What are typical {Brand} <span class="kw">prices</span>?</div>
-<div style="margin-bottom: 4px;">▸ <strong>3.</strong> What's the difference between <span class="kw">refurbished</span> and <span class="kw">used</span> {Brand}?</div>
-<div style="margin-bottom: 4px;">▸ <strong>4.</strong> What warranty comes with refurbished {Brand} equipment?</div>
-<div style="margin-bottom: 4px;">▸ <strong>5.</strong> Is {Brand} good for [research/clinical/QC]?</div>
-<div style="margin-bottom: 4px;">▸ <strong>6.</strong> How long does {Brand} {category} typically last?</div>
-<div style="margin-bottom: 4px;">▸ <strong>7.</strong> Can I get <span class="kw">service</span> for older {Brand} equipment?</div>
-<div style="margin-bottom: 4px;">▸ <strong>8.</strong> Where can I buy <span class="kw">parts</span> for {Brand} equipment?</div>
-<div style="margin-bottom: 4px;">▸ <strong>9.</strong> What are the best alternatives to {Brand}?</div>
-<div style="margin-bottom: 4px;">▸ <strong>10.</strong> What's the typical lead time for {Brand} refurbished equipment?</div>
-<div style="margin-bottom: 4px;">▸ <strong>11.</strong> What's the difference between {Brand} {model A} and {model B}?</div>
-<div style="margin-bottom: 4px;">▸ <strong>12.</strong> Does {Brand} equipment ship internationally?</div>
+<div style="margin-bottom: 8px;"><strong>Q1.</strong> {faq_question_1}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_1}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q2.</strong> {faq_question_2}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_2}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q3.</strong> {faq_question_3}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_3}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q4.</strong> {faq_question_4}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_4}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q5.</strong> {faq_question_5}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_5}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q6.</strong> {faq_question_6}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_6}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q7.</strong> {faq_question_7}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_7}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q8.</strong> {faq_question_8}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_8}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q9.</strong> {faq_question_9}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_9}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q10.</strong> {faq_question_10}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_10}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q11.</strong> {faq_question_11}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_11}</span></div>
+<div style="margin-bottom: 8px;"><strong>Q12.</strong> {faq_question_12}<br><span style="color: var(--text-tertiary); padding-left: 14px;">A: {faq_answer_12}</span></div>
 </div>
 <div class="kw-note" style="margin-top: 8px;">
 ↳ <strong>12 vragen voor GEO/AI Overview coverage</strong> · KW dekking: <span class="kw">manuals</span> · <span class="kw">price</span> · <span class="kw">refurbished</span> · <span class="kw">used</span> · <span class="kw">parts</span> · <span class="kw">service</span> · warranty<br>
@@ -1542,25 +1542,25 @@ logo
 </thead>
 <tbody>
 <tr style="border-bottom: 0.5px solid var(--border-tertiary);">
-<td style="padding: 8px;">Q Exactive HF</td>
-<td style="padding: 8px; color: var(--text-secondary);">Mass spec</td>
-<td style="padding: 8px;">€28-35k</td>
-<td style="padding: 8px;">€38-45k</td>
-<td style="padding: 8px; color: var(--text-secondary);">Proteomics</td>
+<td style="padding: 8px;">{compare_model_1}</td>
+<td style="padding: 8px; color: var(--text-secondary);">{compare_category_1}</td>
+<td style="padding: 8px;">€{compare_price_used_min_1}-{compare_price_used_max_1}</td>
+<td style="padding: 8px;">€{compare_price_refurbished_min_1}-{compare_price_refurbished_max_1}</td>
+<td style="padding: 8px; color: var(--text-secondary);">{compare_application_1}</td>
 </tr>
 <tr style="border-bottom: 0.5px solid var(--border-tertiary);">
-<td style="padding: 8px;">Orbitrap Eclipse</td>
-<td style="padding: 8px; color: var(--text-secondary);">Mass spec</td>
-<td style="padding: 8px;">€45-55k</td>
-<td style="padding: 8px;">€58-68k</td>
-<td style="padding: 8px; color: var(--text-secondary);">Top-down protein analysis</td>
+<td style="padding: 8px;">{compare_model_2}</td>
+<td style="padding: 8px; color: var(--text-secondary);">{compare_category_2}</td>
+<td style="padding: 8px;">€{compare_price_used_min_2}-{compare_price_used_max_2}</td>
+<td style="padding: 8px;">€{compare_price_refurbished_min_2}-{compare_price_refurbished_max_2}</td>
+<td style="padding: 8px; color: var(--text-secondary);">{compare_application_2}</td>
 </tr>
 <tr>
-<td style="padding: 8px;">Vanquish HPLC</td>
-<td style="padding: 8px; color: var(--text-secondary);">HPLC</td>
-<td style="padding: 8px;">€12-18k</td>
-<td style="padding: 8px;">€14-22k</td>
-<td style="padding: 8px; color: var(--text-secondary);">Analytical chemistry</td>
+<td style="padding: 8px;">{compare_model_3}</td>
+<td style="padding: 8px; color: var(--text-secondary);">{compare_category_3}</td>
+<td style="padding: 8px;">€{compare_price_used_min_3}-{compare_price_used_max_3}</td>
+<td style="padding: 8px;">€{compare_price_refurbished_min_3}-{compare_price_refurbished_max_3}</td>
+<td style="padding: 8px; color: var(--text-secondary);">{compare_application_3}</td>
 </tr>
 </tbody>
 </table>
